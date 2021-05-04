@@ -16,13 +16,13 @@ class node{
 		void setPrev( node * prev){
 			this->prev = prev;
 		}
-		void getData (){
-			return this->data
+		int getData (){
+			return this->data;
 		}
-		void getNext (){
+		node * getNext (){
 			return this->next;
 		}
-		void getPrev (){
+		node * getPrev (){
 			return this->prev;
 		}
 		
@@ -40,7 +40,20 @@ class Circular_linked_list{
 			here
 
 		*/
-		void push();
+		void push( int data){
+			node * now;
+			now = new node();
+			now->setData(data);
+			if( current == nullptr){
+				current = now;
+			}
+			else{
+				now->setNext(current);
+                now->setPrev(current->getPrev());
+                current = now;
+			}
+			size++;
+		}
 		void pop();
 		void pop(int data);
 		void push_after(int new_data,int pa_data);
@@ -48,7 +61,7 @@ class Circular_linked_list{
 		void print();
 
 
-}
+};
 
 
 
