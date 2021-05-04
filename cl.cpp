@@ -7,12 +7,25 @@ class node{
 		node* next;
 		node* prev;
 	public:
-		//add getter and setter functions here
-		/*
-
-			here
-
-		*/
+		void setData( int data){
+			this->data = data;
+		}
+		void setNext( node * next){
+			this->next = next;
+		}
+		void setPrev( node * prev){
+			this->prev = prev;
+		}
+		void getData (){
+			return this->data
+		}
+		void getNext (){
+			return this->next;
+		}
+		void getPrev (){
+			return this->prev;
+		}
+		
 };
 class Circular_linked_list{
 	private:
