@@ -57,7 +57,7 @@ class Circular_linked_list{
 		void pop();
 		void pop(int data);
 
-		//PushBefore function added by Mahdi Shirazi (GitHub ID: mhdshrz)
+		//PushAfter function added by Mahdi Shirazi (GitHub ID: mhdshrz)
 		void PushAfter (int newdata, int PushAfterdata) {
 
             node* ptr=nullptr;
@@ -103,7 +103,7 @@ class Circular_linked_list{
 
         }
 
-		//PushAfter function added by Mahdi Shirazi (GitHub ID: mhdshrz)
+		//PushBefore function added by Mahdi Shirazi (GitHub ID: mhdshrz)
 		void PushBefore (int newdata, int PushBeforedata) {
 
             node* ptr=nullptr;
