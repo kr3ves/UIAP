@@ -41,14 +41,48 @@ private:
     node *current;
 
 public:
-    Circular_linked_list();
-    ~Circular_linked_list();
-    //add getter and setter functions here
-    /*
-		
-			here
+    Circular_linked_list()
+    {
+        this->size = 0;
+        this->current = nullptr;
+    }
+    ~Circular_linked_list()
+    {
+        node *tmp = new node;
+        tmp = this->current;
 
-		*/
+        for (int i = 0; i < size; i++)
+        {
+            node *tmp2 = new node;
+            tmp2 = tmp;
+            tmp = tmp->getNext();
+            delete tmp2;
+        }
+
+        this->size = 0;
+        this->current = nullptr;
+        delete tmp;
+    }
+    // getter and setter functions
+    int get_size()
+    {
+        return this->size;
+    }
+    void set_size(int size)
+    {
+        this->size = size;
+        return;
+    }
+    node * get_current()
+    {
+        return this->current;
+    }
+    void set_current(node * current)
+    {
+        this->current = current;
+        return;
+    }
+
     void push(int data)
     {
         node *now;
