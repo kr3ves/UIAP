@@ -288,6 +288,11 @@ int main()
         {
             list.pop();
         }
+        else if(command == "print")
+        {
+            cin >> target;
+            list.print(target);
+        }
         else
         {
             cout << "Wrong input! Try again..." << endl;
