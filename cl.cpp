@@ -251,4 +251,51 @@ public:
 
 int main()
 {
+    // commands:
+    // finish -> end the loop and print data, push -> push the data after current, pushA and pushB -> push the data after and before target data
+    // spop -> pop node which has data, pop -> pop current node
+    Circular_linked_list list;
+    int data, target;
+
+    string command;
+    cin >> command;
+
+    while(command != "finish")
+    {
+        if(command == "push")
+        {
+            cin >> data;
+            list.push(data);
+        }
+        else if (command == "pushA")
+        {
+            cin >> data;
+            cin >> target;
+            list.PushAfter(data, target);
+        }
+        else if(command == "fushB")
+        {
+            cin >> data;
+            cin >> target;
+            list.PushBefore(data, target);
+        }
+        else if(command == "spop") // SPop stands for Specific Pop
+        {
+            cin >> target;
+            list.pop(target);
+        }
+        else if(command == "pop")
+        {
+            list.pop();
+        }
+        else
+        {
+            cout << "Wrong input! Try again..." << endl;
+        }
+        cin >> command;
+    }
+
+    list.print();
+
+    return 0;
 }
